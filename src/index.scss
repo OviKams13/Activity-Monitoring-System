@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none; // Removes default underlines
+  color: inherit; // Inherits the color of the parent element
+}
+
+body {
+  font-family: "Arial", sans-serif; // Change font style
+  overflow: hidden; // Prevents unwanted scrolling
+}
