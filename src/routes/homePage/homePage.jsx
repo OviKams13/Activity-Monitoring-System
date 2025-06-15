@@ -1,5 +1,6 @@
-// import SearchBar from "../../components/searchBar/SearchBar";
 import "./homePage.scss";
+import TableContainer from "../../components/TableContainer/TableContainer";
+import CardInformation from "../../components/CardInformation/CardInformation";
 
 function HomePage() {
   const dummyData = [
@@ -34,53 +35,12 @@ function HomePage() {
       <div className="textContainer">
         <div className="wrapper">
           <h1 className="title">Stay on Track - Monitor Your Desktop Usage</h1>
-
-          <div className="tableContainer">
-            <h2>Activity Log</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Application Name</th>
-                  <th>Duration</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                </tr>
-              </thead>
-              <tbody>
-                {dummyData.map((entry, index) => (
-                  <tr key={index}>
-                    <td>{entry.appName}</td>
-                    <td>{entry.duration}</td>
-                    <td>{entry.date}</td>
-                    <td>{entry.time}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <TableContainer data={dummyData} />
         </div>
       </div>
 
       <div className="imgContainer">
-        <div className="userCard">
-          <div className="userCardHeader">
-            <h2>User Information</h2>
-            <button className="updateBtn">Update Profile</button>
-          </div>
-          <div className="info">
-            <span>
-              Avatar:
-              <img src="noavatar.jpg" alt="Avatar" />
-            </span>
-            <span>
-              Username: <b>Pedri</b>
-            </span>
-            <span>
-              Email: <b>pedri@example.com</b>
-            </span>
-            <button className="logoutBtn">Logout</button>
-          </div>
-        </div>
+        <CardInformation />
       </div>
     </div>
   );

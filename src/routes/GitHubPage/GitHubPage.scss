@@ -1,0 +1,24 @@
+.GitHubPage {
+  display: flex;
+  height: 100vh;
+
+  .leftside {
+    flex: 2.7;
+    padding: 40px;
+    background-color: #fff;
+    overflow-y: auto;
+    max-height: 100vh;
+    padding-bottom: 150px;
+  }
+
+  .rightside {
+    flex: 1.85;
+    background-color: #f6f2f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+}

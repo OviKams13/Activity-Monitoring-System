@@ -41,7 +41,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: #fcf5f3;
+  background-color: #f6f2f8;
   height: 100%;
 
   a {
@@ -56,7 +56,10 @@ a {
   }
 
   .register {
-    background-color: #fece51;
+    background-color: #a259ff;
+    color: #f6f2f8;
+    font-weight: bold;
+    border-radius: 5px;
   }
 }
 

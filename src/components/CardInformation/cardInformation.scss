@@ -1,0 +1,59 @@
+.userCard {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .userCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .updateBtn {
+      background-color: #a259ff;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    b {
+      font-size: 14px;
+    }
+
+    .logoutBtn {
+      width: 100px;
+      background-color: #ff0000be;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}

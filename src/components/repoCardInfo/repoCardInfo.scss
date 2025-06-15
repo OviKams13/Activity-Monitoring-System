@@ -1,0 +1,45 @@
+.infoCard {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .fetchBtn {
+    background-color: #a259ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .repoList {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 14px;
+
+      strong {
+        color: #555;
+        margin-right: 5px;
+      }
+    }
+  }
+}
