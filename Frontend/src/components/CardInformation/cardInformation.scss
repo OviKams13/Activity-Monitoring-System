@@ -26,6 +26,12 @@
       border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
+
+      transition: all 0.4s ease;
+
+  &:hover {
+    scale: 1.05;
+  }
     }
   }
 
@@ -54,6 +60,12 @@
       border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
+
+      transition: all 0.4s ease;
+
+  &:hover {
+    scale: 1.05;
+  }
     }
   }
 }
