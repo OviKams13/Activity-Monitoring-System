@@ -1,7 +1,7 @@
 
-# GitHub Activity Dashboard – Frontend
+# Activity Monitoring System Dashboard – Frontend
 
-This is the **frontend dashboard** of a GitHub activity tracking system. It's built with **React.js** and **Vite**, featuring dynamic components, SCSS styling, and Chart.js visualizations.
+This is the **frontend dashboard** of a Activity Monitoring System. It's built with **React.js** and **Vite**, featuring dynamic components, SCSS styling, and Chart.js visualizations.
 
 > ⚠️ This project does **not** include the `node_modules/` folder. You must install dependencies after cloning.
 
