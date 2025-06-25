@@ -1,15 +1,42 @@
 .tableContainer {
+  max-height: 400px; // Ajuste selon ton besoin
+  overflow-y: auto;
+  
+
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
   }
 
   table {
+    display: block;
     width: 100%;
     border-collapse: collapse;
     font-size: 16px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     table-layout: fixed;
+    border: 1px solid #ddd; // fine bordure grise
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); // ombre douce comme infoCard
+
+
+    thead {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    tbody {
+      display: block;
+      max-height: 270px; // ~6 lignes visibles
+      overflow-y: auto;
+    }
+
+    tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
 
     th,
     td {
@@ -47,6 +74,12 @@
 
     tr:hover {
       background-color: #f9f9f9;
+    }
+
+    .empty-row td {
+      height: 45px; // Hauteur d’une ligne
+      background-color: transparent;
+      border-bottom: 1px solid #ddd;
     }
   }
 }

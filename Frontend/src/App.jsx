@@ -5,6 +5,9 @@ import {
 } from "react-router-dom";
 import GitHubPage from "./routes/GitHubPage/GitHubPage";
 import Layout from "./routes/layout/layout";
+import SupervisorPage from "./routes/supervisorPage/supervisorPage";
+import Login from "./routes/login/login";
+import Register from "./routes/register/register";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,6 +22,18 @@ function App() {
         {
           path: "/GitHubPage",
           element: <GitHubPage />,
+        },
+        {
+          path: "/supervisor",
+          element: <SupervisorPage />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/register",
+          element: <Register />,
         },
       ],
     },

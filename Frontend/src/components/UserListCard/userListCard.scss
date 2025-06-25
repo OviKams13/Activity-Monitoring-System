@@ -1,0 +1,42 @@
+.userListCard {
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 440px;
+  max-height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .userList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 200px; 
+
+    li {
+      padding: 12px 16px;
+      background-color: #f6f2f8;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #e6def0;
+        transform: scale(1.01);
+      }
+    }
+  }
+}

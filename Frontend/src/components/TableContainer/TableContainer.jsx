@@ -14,15 +14,22 @@ function TableContainer({ data }) {
           </tr>
         </thead>
         <tbody>
-          {data.map((entry, index) => (
-            <tr key={index}>
-              <td>{entry.appName}</td>
-              <td>{entry.duration}</td>
-              <td>{entry.date}</td>
-              <td>{entry.time}</td>
-            </tr>
-          ))}
-        </tbody>
+  {data.map((entry, index) => (
+    <tr key={index}>
+      <td>{entry.appName}</td>
+      <td>{entry.duration}</td>
+      <td>{entry.date}</td>
+      <td>{entry.time}</td>
+    </tr>
+  ))}
+
+  {/* Add empty rows if data is less than 6 */}
+  {Array.from({ length: Math.max(0, 6 - data.length) }).map((_, i) => (
+    <tr key={`empty-${i}`} className="empty-row">
+      <td colSpan="4">&nbsp;</td>
+    </tr>
+  ))}
+</tbody>
       </table>
     </div>
   );
