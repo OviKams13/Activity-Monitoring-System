@@ -1,6 +1,10 @@
 import "./userListCard.scss";
 
-function UserListCard({ users = [] }) {
+type UserListCardProps = {
+  users: string[];
+};
+
+function UserListCard({ users = [] }: UserListCardProps): JSX.Element {
   return (
     <div className="userListCard">
       <h2>List of Supervised Users</h2>

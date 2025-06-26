@@ -1,7 +1,7 @@
 import React from 'react';
 import './repoCardInfo.scss';
 
-function RepoCardInfo() {
+const RepoCardInfo = (): JSX.Element => {
   return (
     <>
       {/* GitHub Info Card */}
@@ -26,6 +26,6 @@ function RepoCardInfo() {
       </div>
     </>
   );
-}
+};
 
 export default RepoCardInfo;

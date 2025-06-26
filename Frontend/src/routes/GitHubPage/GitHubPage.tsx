@@ -5,7 +5,7 @@ import Charts from '../../components/charts/Charts';
 import ActivityDetails from '../../components/activityDetails/ActivityDetails';
 import RepoCardInfo from '../../components/repoCardInfo/RepoCardInfo';
 
-function GitHubPage() {
+const GitHubPage = (): JSX.Element => {
   return (
     <div className="GitHubPage">
       <div className="leftside">
@@ -18,6 +18,6 @@ function GitHubPage() {
       </div>
     </div>
   );
-}
+};
 
 export default GitHubPage;

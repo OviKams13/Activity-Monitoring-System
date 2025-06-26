@@ -8,8 +8,9 @@ import Layout from "./routes/layout/layout";
 import SupervisorPage from "./routes/supervisorPage/supervisorPage";
 import Login from "./routes/login/login";
 import Register from "./routes/register/register";
+import { JSX } from "react";
 
-function App() {
+function App(): JSX.Element {
   const router = createBrowserRouter([
     {
       path: "/",
@@ -39,9 +40,7 @@ function App() {
     },
   ]);
 
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

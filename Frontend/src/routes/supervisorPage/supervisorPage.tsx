@@ -1,9 +1,19 @@
-import "./homePage.scss";
+import './supervisorPage.scss';
 import TableContainer from "../../components/TableContainer/TableContainer";
-import UserCardInformation from "../../components/UserCardInformation/UserCardInformation";
+import Charts from '../../components/charts/Charts';
+import ActivityDetails from '../../components/activityDetails/ActivityDetails';
+import SupervisorCardInfo from '../../components/SupervisorCardInfo/SupervisorCardInfo';
+import UserListCard from '../../components/UserListCard/UserListCard';
 
-function HomePage() {
-  const dummyData = [
+type ActivityEntry = {
+  appName: string;
+  duration: string;
+  date: string;
+  time: string;
+};
+
+const SupervisorPage = (): JSX.Element => {
+  const dummyData: ActivityEntry[] = [
     {
       appName: "WhatsApp",
       duration: "30 min",
@@ -109,19 +119,39 @@ function HomePage() {
   ];
 
   return (
-    <div className="homePage">
-      <div className="textContainer">
+    <div className='supervisorPage'>
+      <div className="leftside">
         <div className="wrapper">
-          <h1 className="title">Stay on Track - Monitor Your Desktop Usage</h1>
+          <div className="title">
+            <h1>User Information</h1>
+          </div>
+          <div className="info">
+            <span>
+              Avatar:
+              <img
+                src="noavatar.jpg"
+                alt=""
+              />
+            </span>
+            <span>
+              Username: <b>Pedri</b>
+            </span>
+            <span>
+              E-mail: <b>pedri@example.com</b>
+            </span>
+          </div>
           <TableContainer data={dummyData} />
+          <Charts />
+          <ActivityDetails />
         </div>
       </div>
 
-      <div className="imgContainer">
-        <UserCardInformation />
+      <div className="rightside">
+        <SupervisorCardInfo/>
+        <UserListCard users={["Lamine", "Gavi", "Messi", "Raphinha", "Cubarsi"]} />
       </div>
     </div>
   );
 }
 
-export default HomePage;
+export default SupervisorPage;

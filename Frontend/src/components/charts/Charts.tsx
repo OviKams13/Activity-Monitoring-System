@@ -8,16 +8,18 @@ import {
   LinearScale,
   Tooltip,
   Legend,
+  ChartOptions,
+  ChartData,
 } from 'chart.js';
 import './charts.scss';
 
 ChartJS.register(BarElement, ArcElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-function Charts() {
-  const commitData = [2, 4, 7, 10];
-  const repoLabels = ['Repo 1', 'Repo 2', 'Repo 3', 'Repo 4'];
+const Charts = (): JSX.Element => {
+  const commitData: number[] = [2, 4, 7, 10];
+  const repoLabels: string[] = ['Repo 1', 'Repo 2', 'Repo 3', 'Repo 4'];
 
-  const barData = {
+  const barData: ChartData<'bar'> = {
     labels: repoLabels,
     datasets: [
       {
@@ -29,7 +31,7 @@ function Charts() {
     ],
   };
 
-  const barOptions = {
+  const barOptions: ChartOptions<'bar'> = {
     scales: {
       y: {
         beginAtZero: true,
@@ -37,10 +39,12 @@ function Charts() {
         ticks: { stepSize: 1 },
       },
     },
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+    },
   };
 
-  const languageData = {
+  const languageData: ChartData<'pie'> = {
     labels: ['JavaScript', 'HTML', 'CSS'],
     datasets: [
       {
@@ -52,7 +56,7 @@ function Charts() {
     ],
   };
 
-  const pieOptions = {
+  const pieOptions: ChartOptions<'pie'> = {
     plugins: {
       legend: { position: 'right' },
     },
@@ -71,6 +75,6 @@ function Charts() {
       </div>
     </>
   );
-}
+};
 
 export default Charts;

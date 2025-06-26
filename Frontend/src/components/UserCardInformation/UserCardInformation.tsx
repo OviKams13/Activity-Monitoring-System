@@ -1,15 +1,16 @@
-import "./supervisorCardInfo.scss";
+import React from "react";
+import "./usercardInformation.scss";
 
-function UserCardInformation() {
+const UserCardInformation = (): JSX.Element => {
   return (
     <div className="userCard">
       <div className="userCardHeader">
-        <h2>Supervisor Information</h2>
+        <h2>User Information</h2>
         <button className="updateBtn">Update Profile</button>
       </div>
       <div className="info">
         <span>
-          Supervisor name: <b>Pedri</b>
+          Username: <b>Pedri</b>
         </span>
         <span>
           Email: <b>pedri@example.com</b>
@@ -18,6 +19,6 @@ function UserCardInformation() {
       </div>
     </div>
   );
-}
+};
 
 export default UserCardInformation;
