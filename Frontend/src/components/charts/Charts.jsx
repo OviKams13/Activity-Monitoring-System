@@ -8,30 +8,28 @@ import {
   LinearScale,
   Tooltip,
   Legend,
-  ChartOptions,
-  ChartData,
 } from 'chart.js';
 import './charts.scss';
 
 ChartJS.register(BarElement, ArcElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const Charts = (): JSX.Element => {
-  const commitData: number[] = [2, 4, 7, 10];
-  const repoLabels: string[] = ['Repo 1', 'Repo 2', 'Repo 3', 'Repo 4'];
+function Charts() {
+  const commitData = [2, 4, 7, 10];
+  const repoLabels = ['Repo 1', 'Repo 2', 'Repo 3', 'Repo 4'];
 
-  const barData: ChartData<'bar'> = {
+  const barData = {
     labels: repoLabels,
     datasets: [
       {
         label: 'Commits',
         data: commitData,
-        backgroundColor: '#a259ff',
+        backgroundColor: '#59318e',
         borderRadius: 5,
       },
     ],
   };
 
-  const barOptions: ChartOptions<'bar'> = {
+  const barOptions = {
     scales: {
       y: {
         beginAtZero: true,
@@ -39,12 +37,10 @@ const Charts = (): JSX.Element => {
         ticks: { stepSize: 1 },
       },
     },
-    plugins: {
-      legend: { display: false },
-    },
+    plugins: { legend: { display: false } },
   };
 
-  const languageData: ChartData<'pie'> = {
+  const languageData = {
     labels: ['JavaScript', 'HTML', 'CSS'],
     datasets: [
       {
@@ -56,25 +52,25 @@ const Charts = (): JSX.Element => {
     ],
   };
 
-  const pieOptions: ChartOptions<'pie'> = {
+  const pieOptions = {
     plugins: {
       legend: { position: 'right' },
     },
   };
 
   return (
-    <>
-      <h2 className="sectionTitle">Commits Overview</h2>
+    <div className='charts'>
       <div className="chartWrapper">
+        <h2 className="sectionTitle">Commits Overview</h2>
         <Bar data={barData} options={barOptions} />
       </div>
 
-      <h2 className="sectionTitle">Language Breakdown</h2>
       <div className="pieWrapper">
+        <h2 className="sectionTitle">Language Breakdown</h2>
         <Pie data={languageData} options={pieOptions} />
       </div>
-    </>
+    </div>
   );
-};
+}
 
 export default Charts;

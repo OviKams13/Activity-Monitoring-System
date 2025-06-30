@@ -1,4 +1,9 @@
-.commitsList {
+.ActD{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
+  .commitsList {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -9,6 +14,17 @@
     padding: 15px 20px;
     border-radius: 6px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    .sectionTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 22px;
+    margin-bottom: 25px;
+    }
 
     p {
       margin: 0;
@@ -23,8 +39,47 @@
   }
 }
 
-.branchSelect {
-  margin-top: 15px;
+.card{
+  // padding-top: 70px;
+
+  .sectionTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 22px;
+    margin-bottom: 25px;
+    }
+
+  .infoCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 450px;
+  // height: 225px;
+
+  .repoList {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 14px;
+
+      strong {
+        color: #555;
+        margin-right: 5px;
+      }
+    }
+  }
+
+}
+}
+}
+
+
+  .branchSelect {
+  // margin-top: 15px;
   padding: 10px 15px;
   font-size: 14px;
   border-radius: 5px;

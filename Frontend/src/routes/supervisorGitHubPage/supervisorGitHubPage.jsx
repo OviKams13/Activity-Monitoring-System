@@ -1,17 +1,12 @@
-import "./homePage.scss";
+import './supervisorGitHubPage.scss';
 import TableContainer from "../../components/TableContainer/TableContainer";
-import UserCardInformation from "../../components/UserCardInformation/UserCardInformation";
-import React from "react";
+import Charts from '../../components/charts/Charts';
+import ActivityDetails from '../../components/activityDetails/ActivityDetails';
+import UserListCard from '../../components/UserListCard/UserListCard';
+import SupervisorSidebar from '../../components/supervisorSidebar/SupervisorSidebar';
 
-type ActivityEntry = {
-  appName: string;
-  duration: string;
-  date: string;
-  time: string;
-};
-
-const HomePage = (): JSX.Element => {
-  const dummyData: ActivityEntry[] = [
+function SupervisorGitHubPage() {
+    const dummyData = [
     {
       appName: "WhatsApp",
       duration: "30 min",
@@ -117,19 +112,40 @@ const HomePage = (): JSX.Element => {
   ];
 
   return (
-    <div className="homePage">
-      <div className="textContainer">
+    <div className='supervisorPage'>
+      <div className="rightside">
+        <SupervisorSidebar/>
+      </div>
+      
+      <div className='wrapper1'>
+        <div className="leftside">
         <div className="wrapper">
-          <h1 className="title">Stay on Track - Monitor Your Desktop Usage</h1>
-          <TableContainer data={dummyData} />
+          <div className="title">
+            <h1>User Information</h1>
+          </div>
+          <div className="info">
+            <span>
+              Avatar:
+              <img
+                src="noavatar.jpg"
+                alt=""
+              />
+            </span>
+            <span>
+              Username: <b>Pedri</b>
+            </span>
+            <span>
+              E-mail: <b>pedri@example.com</b>
+            </span>
+          </div>
+          <Charts />
+          <ActivityDetails />
+          {/* <UserListCard users={["Lamine", "Gavi", "Messi", "Raphinha", "Cubarsi"]} /> */}
         </div>
       </div>
-
-      <div className="imgContainer">
-        <UserCardInformation />
       </div>
     </div>
   );
 }
 
-export default HomePage;
+export default SupervisorGitHubPage;

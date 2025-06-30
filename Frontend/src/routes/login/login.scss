@@ -1,10 +1,19 @@
-.login {
-  height: 100%;
+.loginPage {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  padding-left: 20px;
 
+  .login {
+    flex: 1;
+    display: flex;
+    height: 100%;
+  }
+}
+
+.login {
   .formContainer {
     flex: 3;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +40,7 @@
         padding: 20px;
         border-radius: 5px;
         border: none;
-        background-color: #a259ff;
+        background-color: #59318e;
         color: white;
         font-weight: bold;
         cursor: pointer;

@@ -2,18 +2,11 @@ import './supervisorPage.scss';
 import TableContainer from "../../components/TableContainer/TableContainer";
 import Charts from '../../components/charts/Charts';
 import ActivityDetails from '../../components/activityDetails/ActivityDetails';
-import SupervisorCardInfo from '../../components/SupervisorCardInfo/SupervisorCardInfo';
 import UserListCard from '../../components/UserListCard/UserListCard';
+import SupervisorSidebar from '../../components/supervisorSidebar/SupervisorSidebar';
 
-type ActivityEntry = {
-  appName: string;
-  duration: string;
-  date: string;
-  time: string;
-};
-
-const SupervisorPage = (): JSX.Element => {
-  const dummyData: ActivityEntry[] = [
+function SupervisorPage() {
+    const dummyData = [
     {
       appName: "WhatsApp",
       duration: "30 min",
@@ -120,7 +113,12 @@ const SupervisorPage = (): JSX.Element => {
 
   return (
     <div className='supervisorPage'>
-      <div className="leftside">
+      <div className="rightside">
+        <SupervisorSidebar/>
+      </div>
+      
+      <div className='wrapper1'>
+        <div className="leftside">
         <div className="wrapper">
           <div className="title">
             <h1>User Information</h1>
@@ -141,14 +139,9 @@ const SupervisorPage = (): JSX.Element => {
             </span>
           </div>
           <TableContainer data={dummyData} />
-          <Charts />
-          <ActivityDetails />
+          {/* <UserListCard users={["Lamine", "Gavi", "Messi", "Raphinha", "Cubarsi"]} /> */}
         </div>
       </div>
-
-      <div className="rightside">
-        <SupervisorCardInfo/>
-        <UserListCard users={["Lamine", "Gavi", "Messi", "Raphinha", "Cubarsi"]} />
       </div>
     </div>
   );

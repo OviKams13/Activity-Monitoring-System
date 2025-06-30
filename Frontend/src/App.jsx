@@ -8,9 +8,10 @@ import Layout from "./routes/layout/layout";
 import SupervisorPage from "./routes/supervisorPage/supervisorPage";
 import Login from "./routes/login/login";
 import Register from "./routes/register/register";
-import { JSX } from "react";
+import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
+import SupervisorGitHubPage from "./routes/supervisorGitHubPage/supervisorGitHubPage";
 
-function App(): JSX.Element {
+function App() {
   const router = createBrowserRouter([
     {
       path: "/",
@@ -36,11 +37,21 @@ function App(): JSX.Element {
           path: "/register",
           element: <Register />,
         },
+        {
+          path: "/update",
+          element: <ProfileUpdatePage />,
+        },
+        {
+          path: "/supervisorGitHubPage",
+          element: <SupervisorGitHubPage />,
+        },
       ],
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router} />
+  );
 }
 
 export default App;
